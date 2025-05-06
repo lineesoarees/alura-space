@@ -10,10 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
-from pathlib import Path, os
-from dotenv import load_dotenv #buscar variáveis de ambiente
-
-load_dotenv() #buscar variáveis de ambiente
+from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('SECRET_KEY') #busca a chave que está no arquivo .env
+SECRET_KEY = 'django-insecure--_$gw!$dyn^vqtsy7wzv$vsb(tpq&pol-&8anz&g6_g=qk#a89'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -40,7 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'galeria',
 ]
 
 MIDDLEWARE = [
@@ -108,7 +104,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'pt-br'
 
-TIME_ZONE = 'America/Sao_paulo'
+TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
